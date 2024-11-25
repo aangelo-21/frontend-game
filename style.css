@@ -1,0 +1,186 @@
+body {
+  background-image: url(imagenes/Fondos/Fondo\ body.jpg);
+  margin: 0;
+  position: relative;
+}
+
+main {
+  height: 720px;
+  width: 1280px;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+#pantalla-inicio {
+  background-image: url("imagenes/Fondos/PantallaInicio.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". boton-inicio ."
+    ". . ."
+    ". . .";
+}
+
+.boton-inicio {
+  display: flex;
+  background-color: white;
+  grid-area: boton-inicio;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  font-family: "8BIT WONDER", sans-serif;
+  font-size: 32px;
+  width: 300px;
+}
+
+#texto-inicio {
+  font-family: "8BIT WONDER", sans-serif;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+#pantalla-juego {
+  display: none;
+  background-image: url(imagenes/Fondos/Pantalla\ Juego.png);
+  background-size: cover;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . logo logo logo logo logo . ."
+    ". . barra-de-vida barra-de-vida . barra-de-vida-enemigo barra-de-vida-enemigo . ."
+    ". . . . . . . . ."
+    ". . . . . . . . ."
+    "botones . personaje personaje critico enemigo enemigo . ."
+    "botones . personaje personaje . enemigo enemigo . ."
+    ". . . . . . . . .";
+}
+
+.texto-juego {
+  font-family: "8BIT WONDER", sans-serif;
+  grid-area: logo;
+  align-self: self-end;
+  justify-self: center;
+  font-size: 25px;
+}
+
+.texto-critico {
+  grid-area: critico;
+  justify-content: center;
+  align-self: center;
+  width: 200px;
+}
+
+.personaje {
+  grid-area: personaje;
+  justify-self: center;
+  align-self: center;
+  scale: 1.6;
+}
+
+.enemigo {
+  grid-area: enemigo;
+  justify-self: center;
+  align-self: center;
+  scale: 1.75;
+}
+
+.barra-de-vida {
+  grid-area: barra-de-vida;
+  justify-self: center;
+  align-self: self-end;
+}
+
+.barra-de-vida-2 {
+  grid-area: barra-de-vida-enemigo;
+  justify-self: center;
+  align-self: self-end;
+}
+
+.botones {
+  grid-area: botones;
+  justify-self: center;
+  align-self: self-start;
+  width: 75px;
+}
+
+#pantalla-game-over {
+  display: none;
+  background-color: black;
+  background-size: cover;
+  background-image: url(imagenes/Fondos/Pantalla\ Game\ Over2.png);
+}
+
+.container-game-over {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". game-over-texto ."
+    ". . ."
+    ". game-over-boton .";
+}
+
+.game-over-texto {
+  grid-area: game-over-texto;
+  align-self: center;
+  justify-self: center;
+  width: 700px;
+  color: white;
+}
+
+.game-over-boton {
+  grid-area: game-over-boton;
+  justify-self: center;
+  align-self: center;
+  font-family: "8BIT WONDER", sans-serif;
+  font-size: 32px;
+}
+
+#pantalla-victoria {
+  display: none;
+  background-image: url(imagenes/Fondos/PantallaWin.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-victory {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". texto ."
+    ". . ."
+    ". win-boton .";
+}
+
+.texto-victoria {
+  grid-area: texto;
+  text-align: center;
+  align-self: center;
+  font-family: "8BIT WONDER", sans-serif;
+  font-size: 64px;
+}
+
+.win-boton {
+  grid-area: win-boton;
+  justify-self: center;
+  align-self: center;
+  font-family: "8BIT WONDER", sans-serif;
+  font-size: 32px;
+}
